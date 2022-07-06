@@ -9,18 +9,10 @@
   box-sizing: border-box;
 }
 
-/*======= VARIAVEIS =======*/
+/*============ VARIAVEIS ============*/
 :root {
   --red: hsl(359, 100%, 40%);
-  --cinzaClaro: hsl(0, 0%, 61%);
-  --cinzaMedio: hsl(0, 0%, 35%);
-  --cinzaEscuro: hsl(0, 0%, 24%);
-  --cinza-very-dark: hsl(0, 0%, 15%);
-  --navColor: hsl(0, 0%, 20%);
-  --green: hsl(164, 100%, 50%);
-  --green-dark: hsl(164, 100%, 36%);
-  --green-very-dark: hsl(164, 88%, 16%);
-  --branco: hsl(0, 0%, 100%);
+  --rosa: hsl(3, 41%, 90%);
 
   font-size: 62.5%; /* 1 rem = 10 px*/
 }
@@ -35,34 +27,319 @@ html {
   padding-inline: 2rem;
 }
 
-/*======= NAV =======*/
+/*============ NAV ============*/
 nav {
   width: 100%;
-  height: 50px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
-/*======= HOME =======*/
+nav svg path {
+  fill: var(--red);
+}
+
+nav.scroll {
+  background-color: var(--red);
+}
+
+nav.scroll svg path {
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+
+/*============ MENU-EXPANDED ============*/
+nav .close-menu {
+  display: none;
+}
+
+body.menu-expanded {
+  overflow: hidden;
+}
+
+body.menu-expanded > :not(nav) {
+  visibility: hidden;
+}
+
+body.menu-expanded nav svg path {
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+
+body.menu-expanded .menu {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: var(--red);
+  z-index: 90;
+}
+
+body.menu-expanded .close-menu{
+    display: block;
+}
+
+body.menu-expanded .open-menu{
+    display: none;
+}
+
+/*============ HOME ============*/
 #home::before {
-  width: 100px;
-  height: 100px;
-  background-color: red;
+  content: '';
+  width: 100%;
+  height: 42rem;
+  background-color: var(--rosa);
+  display: block;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 #home {
-  width: 100%;
   padding-top: 8rem;
 }
 
 #home h2 {
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: 700;
+  color: #000000;
 }
 
 #home h1 {
   font-family: 'Dancing Script', cursive;
-  font-size: 33px;
+  font-size: 3.3rem;
   color: var(--red);
+
+  margin-top: -0.6rem;
+  padding-bottom: 1rem;
+}
+
+#home p {
+  font-size: 1.9rem;
+  font-weight: 300;
+  color: #000000;
+  padding-bottom: 8rem;
+}
+
+#home img {
+  display: block;
+  width: 27.7rem;
+  height: 18.46rem;
+  border-radius: 10px;
+  margin: 0 auto;
+
+  box-shadow: 4px 5px 7px rgba(0, 0, 0, 0.34);
+}
+
+/*============ ABOUT ============*/
+#about {
+  padding-bottom: 7rem;
+}
+
+#about > p {
+  padding-top: 8rem;
+  width: 27.2rem;
+  margin: 0 auto;
+
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  text-align: center;
+
+  padding-bottom: 3rem;
+}
+
+#about > p span {
+  color: var(--red);
+}
+
+#about .stat {
+  width: 19rem;
+  height: 25.3rem;
+  padding-block: 2.4rem;
+  border-radius: 23px;
+  border: 1px solid #ecb5b6;
+  margin: 0 auto;
+
+  background-color: var(--rosa);
+}
+
+#about .stat .stats p {
+  text-align: center;
+}
+
+#about .stat .stats p:nth-child(1) {
+  font-weight: 600;
+  font-size: 4rem;
+  text-align: center;
+}
+
+#about .stat .stats p:nth-child(2) {
+  width: 15rem;
+  margin: 0 auto;
+  font-size: 1.6rem;
+
+  color: var(--red);
+}
+
+#about .stat .stats:nth-child(1) p:nth-child(2) {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--red);
+}
+
+#about .stat .stats:nth-child(2) {
+  padding-top: 3rem;
+}
+
+/*============ PRODUCTS ============*/
+#products > p {
+  width: 23.5rem;
+  font-weight: 400;
+  font-size: 2.4rem;
+
+  margin: 0 auto;
+  text-align: center;
+
+  padding-bottom: 3rem;
+}
+
+#products .moveis {
+  width: 100%;
+  height: 17rem;
+  border-radius: 23px;
+  background-color: red;
+  margin-bottom: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#products .moveis.quarto {
+  background-image: url('assets/image-div-quarto.png');
+  background-size: contain;
+}
+
+#products .moveis.sala {
+  background-image: url('assets/image-div-sala.png');
+  background-size: contain;
+}
+
+#products .moveis.cozinha {
+  background-image: url('assets/image-div-cozinha.png');
+  background-size: contain;
+  margin-bottom: 7rem;
+}
+
+#products .moveis > p {
+  color: #ffffff;
+
+  font-weight: 500;
+  font-size: 3.2rem;
+}
+
+/*============ FOOTER ============*/
+footer {
+  background-color: var(--rosa);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer img {
+  width: 25.1rem;
+  display: block;
+
+  padding-top: 2rem;
+}
+
+footer a.orcamento-btn {
+  margin-top: 4.5rem;
+
+  width: 26rem;
+  height: 3.9rem;
+  border-radius: 20px;
+
+  background-color: var(--red);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.6rem;
+  padding-right: 1.2rem;
+  padding-left: 1.2rem;
+
+  margin-bottom: 1.5rem;
+}
+
+footer a.orcamento-btn:hover {
+  color: var(--red);
+  background-color: var(--rosa);
+
+  border: 1px solid var(--red);
+}
+
+footer a.orcamento-btn:hover svg path {
+  fill: var(--red);
+}
+
+footer a.orcamento-btn svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+footer a.endereco,
+footer a.insta,
+footer a.facebook {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  text-decoration: none;
+  color: #000000;
+
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+
+footer .links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+footer a.facebook {
+  padding-bottom: 2.4rem;
+}
+
+p#dev {
+  width: 100%;
+  height: 3.6rem;
+  text-align: center;
+
+  font-weight: 300;
+  font-size: 15px;
+  color: #ffffff;
+  background-color: #292929;
+  padding-block: 0.9rem;
+}
+
+p#dev span {
+  color: aquamarine;
 }
