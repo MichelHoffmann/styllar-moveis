@@ -34,10 +34,9 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  
   position: fixed;
   top: 0;
-  left: 0;
   z-index: 100;
 }
 
@@ -54,43 +53,29 @@ nav.scroll svg path {
   stroke: #ffffff;
 }
 
-/*============ MENU-EXPANDED ============*/
-nav .close-menu {
+nav .open-menu:hover,
+nav .close-menu:hover {
+  cursor: pointer;
+}
+
+nav .close-menu,
+nav .menu{
   display: none;
 }
 
-body.menu-expanded {
-  overflow: hidden;
-}
-
-body.menu-expanded > :not(nav) {
-  visibility: hidden;
-}
-
-body.menu-expanded nav svg path {
-  fill: #ffffff;
-  stroke: #ffffff;
-}
-
-body.menu-expanded .menu {
-  visibility: visible;
+nav .menu{
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-
   background-color: var(--red);
+
   z-index: 90;
 }
 
-body.menu-expanded .close-menu{
-    display: block;
-}
+/*============ MENU-EXPANDED ============*/
 
-body.menu-expanded .open-menu{
-    display: none;
-}
 
 /*============ HOME ============*/
 #home::before {
