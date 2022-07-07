@@ -1,11 +1,10 @@
 var header = document.getElementById('navigation')
-var opMenu = document.getElementById('op-menu')
-var clMenu = document.getElementById('cl-menu')
-var bd = document.getElementById('body')
+var openbtn = document.getElementById('open-menu')
+var closebtn = document.getElementById('close-menu')
 
 window.addEventListener('scroll', onScroll)
-opMenu.addEventListener('click', openMenu)
-clMenu.addEventListener('click', closeMenu)
+openbtn.addEventListener('click', openMenu)
+closebtn.addEventListener('click', closeMenu)
 
 function onScroll() {
   if (scrollY > 0) {
@@ -16,9 +15,9 @@ function onScroll() {
 }
 
 function openMenu() {
-  bd.classList.add('menu-expanded')
+  body.classList.add('open')
 }
 
 function closeMenu() {
-  bd.classList.remove('menu-expanded')
+  body.classList.remove('open')
 }

@@ -9,10 +9,10 @@
 
     <title>Styllar Moveis</title>
   </head>
-  <body id="body" class="menu-expanded">
-    <nav id="navigation" class="wrapper">
+  <body id="body">
+    <nav id="navigation" class="wrapper menu-open">
       <a href="#home">
-        <svg 
+        <svg
           width="50"
           height="50"
           viewBox="0 0 50 50"
@@ -50,38 +50,47 @@
         </svg>
       </a>
 
-      <svg id="op-menu" class="open-menu"
-        width="30"
-        height="30"
-        viewBox="0 0 30 30"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M5 7.5H25M5 15H25M5 22.5H25"
-          stroke="#CB0005"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        /></svg
-      ><!--open menu-->
+      <button class="open-menu" id="open-menu" >
+        <svg
+          width="30"
+          height="30"
+          viewBox="0 0 30 30"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5 7.5H25M5 15H25M5 22.5H25"
+            stroke="#CB0005"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          /></svg
+        >
+      </button><!--open menu-->
 
-      <svg id="cl-menu" class="close-menu"
-        width="30"
-        height="30"
-        viewBox="0 0 30 30"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M7.5 22.5L22.5 7.5M7.5 7.5L22.5 22.5"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        /></svg
-      ><!--close menu-->
-      <div class="menu"></div>
+      <button class="close-menu" id="close-menu">
+        <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.5 22.5L22.5 7.5M7.5 7.5L22.5 22.5"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+            >
+      </button><!--close menu-->
+
+      <section class="menu active">
+        <a href="">Quarto</a>
+        <a href="">Sala</a>
+        <a href="">Cozinha</a>
+      </section>
     </nav>
 
     <section id="home" class="wrapper">

@@ -34,7 +34,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
   position: fixed;
   top: 0;
   z-index: 100;
@@ -58,24 +58,78 @@ nav .close-menu:hover {
   cursor: pointer;
 }
 
-nav .close-menu,
-nav .menu{
+nav button {
+  border: 0;
+  background-color: #00000000;
+}
+
+nav .menu,
+nav .close-menu {
   display: none;
 }
 
-nav .menu{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+section.menu {
   background-color: var(--red);
+  position: fixed;
+  top: 100vh;
+  left: 0;
 
-  z-index: 90;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+
+  transition: 300ms;
 }
 
-/*============ MENU-EXPANDED ============*/
+/*============ MENU-OPEN ============*/
+body.open nav {
+  background-color: var(--red);
+}
 
+body.open nav .open-menu {
+  display: none;
+}
+
+body.open nav .close-menu {
+  display: block;
+}
+
+body.open nav svg path {
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+
+body.open section.menu {
+  display: block;
+  background-color: var(--red);
+  position: fixed;
+  top: 60px;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+
+  transition: 300ms;
+}
+
+body.open section.menu a {
+  text-decoration: none;
+  color: #ffffff;
+
+  font-weight: 700;
+  font-size: 3rem;
+}
 
 /*============ HOME ============*/
 #home::before {
