@@ -267,17 +267,20 @@ body.open section.menu a {
 
 #products .moveis.quarto {
   background-image: url('assets/image-div-quarto.png');
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #products .moveis.sala {
   background-image: url('assets/image-div-sala.png');
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #products .moveis.cozinha {
   background-image: url('assets/image-div-cozinha.png');
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
   margin-bottom: 7rem;
 }
 
