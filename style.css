@@ -117,7 +117,6 @@ body.open section.menu {
   padding-top: 7rem;
 
   transition: 400ms;
-
 }
 
 body.open section.menu a {
@@ -128,8 +127,8 @@ body.open section.menu a {
   font-size: 3rem;
 }
 
-body.open section.menu a.orcamento-btn{
-  width: 26rem;
+body.open section.menu a.orcamento-btn {
+  width: 26.5rem;
   height: 3.9rem;
   border-radius: 20px;
   border: 2px solid #ff6265;
@@ -142,7 +141,7 @@ body.open section.menu a.orcamento-btn{
   justify-content: space-between;
 
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.6rem;
   padding-right: 1.2rem;
   padding-left: 1.2rem;
@@ -150,11 +149,11 @@ body.open section.menu a.orcamento-btn{
   margin-bottom: 1.5rem;
 }
 
-body.open section.menu a.orcamento-btn svg path{
+body.open section.menu a.orcamento-btn svg path {
   fill: var(--red);
 }
 
-body.open section.menu .redes-menu{
+body.open section.menu .redes-menu {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -314,12 +313,15 @@ body.open section.menu .redes-menu{
   margin-bottom: 7rem;
 }
 
-#products .moveis > p {
+#products .moveis {
   color: #ffffff;
 
   font-weight: 500;
   font-size: 3.2rem;
+  text-decoration: none;
 }
+
+
 
 /*============ FOOTER ============*/
 footer {
@@ -400,6 +402,7 @@ footer a.facebook {
   padding-bottom: 2.4rem;
 }
 
+/*============ DEV ============*/
 p#dev {
   width: 100%;
   height: 3.6rem;
@@ -416,6 +419,7 @@ p#dev span {
   color: aquamarine;
 }
 
+/*============ BACK TO TOP ============*/
 #backToTop {
   display: block;
   position: fixed;
