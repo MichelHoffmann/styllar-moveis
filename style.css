@@ -77,18 +77,13 @@ section.menu {
   width: 100%;
   height: 100%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 4rem;
-
-  transition: 300ms;
+  transition: 400ms;
 }
 
 /*============ MENU-OPEN ============*/
 body.open nav {
   background-color: var(--red);
+  transition: 300ms;
 }
 
 body.open nav .open-menu {
@@ -116,11 +111,13 @@ body.open section.menu {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 4rem;
 
-  transition: 300ms;
+  padding-top: 7rem;
+
+  transition: 400ms;
+
 }
 
 body.open section.menu a {
@@ -129,6 +126,39 @@ body.open section.menu a {
 
   font-weight: 700;
   font-size: 3rem;
+}
+
+body.open section.menu a.orcamento-btn{
+  width: 26rem;
+  height: 3.9rem;
+  border-radius: 20px;
+  border: 2px solid #ff6265;
+
+  background-color: #ffffff;
+  color: var(--red);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.6rem;
+  padding-right: 1.2rem;
+  padding-left: 1.2rem;
+
+  margin-bottom: 1.5rem;
+}
+
+body.open section.menu a.orcamento-btn svg path{
+  fill: var(--red);
+}
+
+body.open section.menu .redes-menu{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2.1rem;
 }
 
 /*============ HOME ============*/
@@ -146,7 +176,7 @@ body.open section.menu a {
 }
 
 #home {
-  padding-top: 8rem;
+  padding-top: 14rem;
 }
 
 #home h2 {
