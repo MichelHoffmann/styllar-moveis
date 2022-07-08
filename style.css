@@ -385,3 +385,17 @@ p#dev {
 p#dev span {
   color: aquamarine;
 }
+
+#backToTop {
+  display: block;
+  position: fixed;
+  bottom: -100px;
+  right: 20px;
+  transition: 400ms;
+}
+
+#backToTop.active {
+  bottom: 40px;
+  right: 20px;
+  transition: 400ms;
+}
