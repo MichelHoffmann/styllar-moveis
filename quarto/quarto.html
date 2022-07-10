@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="stylesheet" href="glide.esm.js" />
     <link rel="stylesheet" href="quarto.css" />
 
     <title>Móveis para Quarto</title>
@@ -181,9 +182,26 @@
     </header>
 
     <section id="moveis">
-      <aside class="closets">
-        <p>Closets</p>
-      </aside>
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">0</li>
+            <li class="glide__slide">1</li>
+            <li class="glide__slide">2</li>
+            <li class="glide__slide">3</li>
+            <li class="glide__slide">4</li>
+            <li class="glide__slide">5</li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            <
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            >
+          </button>
+        </div>
+      </div>
     </section>
 
     <a href="#home">
@@ -205,6 +223,7 @@
       </svg>
     </a>
 
+    <script src="glide.esm.js"></script>
     <script src="quarto.js"></script>
   </body>
 </html>

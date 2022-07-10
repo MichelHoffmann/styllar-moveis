@@ -193,6 +193,23 @@ header h2 span {
   height: 230px;
 }
 
+/*============ GLIDER JS ============*/
+/* #moveis .glide .glide__track ul {
+  display: flex;
+  gap: 10px;
+}
+
+#moveis .glide .glide__track ul li {
+  width: 217px;
+  height: 217px;
+
+  border: 1px solid var(--red);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
 /*============ BACK TO TOP ============*/
 #backToTop {
   display: block;

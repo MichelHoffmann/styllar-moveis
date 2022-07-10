@@ -32,3 +32,23 @@ function showButton() {
     toTop.classList.remove('active')
   }
 }
+
+import Glide from '../quarto/glide.esm'
+
+new Glide('.glide', {
+  type: 'slider',
+  perView: 2,
+  focusAt: 'center',
+}).mount()
+
+// var simpleGlide = document.querySelector('glide__slides')
+
+// new Glider(simpleGlide, {
+//   slidesToShow: 2,
+//   slidesToScroll: 2,
+//   draggable: true,
+//   arrows: {
+//     prev: '.glide__arrow glide__arrow--left',
+//     next: '.glide__arrow glide__arrow--right',
+//   },
+// })
