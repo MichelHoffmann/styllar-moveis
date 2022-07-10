@@ -33,22 +33,8 @@ function showButton() {
   }
 }
 
-import Glide from '../quarto/glide.esm'
+var emblaNode = document.querySelector('.embla')
+var options = { loop: true }
+var plugins = [] // Plugins
 
-new Glide('.glide', {
-  type: 'slider',
-  perView: 2,
-  focusAt: 'center',
-}).mount()
-
-// var simpleGlide = document.querySelector('glide__slides')
-
-// new Glider(simpleGlide, {
-//   slidesToShow: 2,
-//   slidesToScroll: 2,
-//   draggable: true,
-//   arrows: {
-//     prev: '.glide__arrow glide__arrow--left',
-//     next: '.glide__arrow glide__arrow--right',
-//   },
-// })
+var embla = EmblaCarousel(emblaNode, options, plugins)
